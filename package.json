@@ -19,6 +19,8 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@teachablemachine/image": "^0.8.5",
+    "@tensorflow/tfjs": "^4.10.0",
     "autoprefixer": "^10.4.15",
     "postcss": "^8.4.29",
     "postcss-cli": "^10.1.0"
