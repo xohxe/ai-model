@@ -1,0 +1,3 @@
+.webcam-container :not(:last-child) {
+  display: none;
+}/*# sourceMappingURL=components.css.map */

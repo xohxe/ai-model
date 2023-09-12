@@ -1,0 +1,20 @@
+{
+  "name": "ai-model",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tailwindcss": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "css": "postcss ./src/style/index.css -o ./src/style/style.css  -w"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0"
+  }
+}

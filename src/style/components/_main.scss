@@ -1,0 +1,5 @@
+#webcam-container {
+  > canvas:not(:last-child) {
+    display: none;
+  }
+}

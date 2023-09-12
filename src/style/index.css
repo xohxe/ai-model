@@ -1,0 +1,7 @@
+@import "tailwindcss/base.css";
+@import "tailwindcss/components.css";
+@import "tailwindcss/utilities.css";
+@import "tailwindcss/variants.css";
+#webcam-container > canvas:not(:last-child) {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
