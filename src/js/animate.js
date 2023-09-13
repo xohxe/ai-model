@@ -1,12 +1,12 @@
-const btn1 = document.querySelector("#clickBtn");
+// const btn1 = document.querySelector("#clickBtn");
 
-btn1.addEventListener("click", () => {
-  //  console.log("tt");
-  document
-    .querySelector(".cool-effect")
-    .scrollIntoView({ behavior: "smooth", inline: "nearest" });
-  //ClickScroll();
-});
+// btn1.addEventListener("click", () => {
+//   //  console.log("tt");
+//   document
+//     .querySelector(".cool-effect")
+//     .scrollIntoView({ behavior: "smooth", inline: "nearest" });
+//   //ClickScroll();
+// });
 
 window.addEventListener("scroll", () => {
   ClickScroll();

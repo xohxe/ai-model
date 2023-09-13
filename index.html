@@ -8,45 +8,46 @@
     <title>AI로 알아보는 닮은 꼴 찾기</title>
   </head>
   <body class="full-screen">
-    <main class="">
-      <div class="top-header">
-        <div class="container">
-          <!-- <i class="fas fa-5x fa-laugh"></i> -->
-          <h3>Welcome</h3>
-          <p>당신과 닮은 유명인은 누구?</p>
-          <button type="button" id="clickBtn" class="click-btn">
-            시작하기
-          </button>
-        </div>
+    <div class="top-header">
+      <div class="container">
+        <!-- <i class="fas fa-5x fa-laugh"></i> -->
+        <h3>Welcome</h3>
+        <p>당신과 닮은 유명인은 누구?</p>
+        <button type="button" id="clickBtn" class="click-btn">시작하기</button>
       </div>
+    </div>
 
-      <section class="cont-2 cool-effect">
-        <!-- <h3>Let's Start!</h3> -->
-        <div class="btn-wrap">
-          <input type="file" onchange="readURL(this);" accept="image/*" />
-          <img src="#" id="face-image" class="file-upload-image" />
-          <button type="button" id="predict-btn" class="click-btn">
-            분석하기
-          </button>
-          <!-- <button type="button" id="uploadPhoto" class="click-btn">
+    <section class="cont-2 cool-effect">
+      <!-- <h3>Let's Start!</h3> -->
+      <div class="btn-wrap">
+        <input type="file" onchange="readURL(this);" accept="image/*" />
+        <img src="#" id="face-image" class="file-upload-image" />
+        <button type="button" id="predict-btn" class="click-btn">
+          분석하기
+        </button>
+        <!-- <button type="button" id="uploadPhoto" class="click-btn">
             업로드
           </button> -->
-          <!-- <button type="button" id="takePhoto" class="click-btn">
+        <!-- <button type="button" id="takePhoto" class="click-btn">
             직접촬영
           </button> -->
+      </div>
+    </section>
+    <section class="cont-3">
+      <div class="flex flex-col justify-between items-center">
+        <div id="webcam-container"></div>
+        <div id="label-wrap" class="hidden text-white mt-3 flex gap-4">
+          당신과 가장 닮은 유명인은..
         </div>
-      </section>
-      <section class="cont-3">
-        <div class="flex flex-col justify-between items-center">
-         
-          <div id="webcam-container"></div>
-          <div id="label-wrap" class="hidden text-white mt-3 flex gap-4">
-            당신과 가장 닮은 유명인은..
-          </div>
-          <div id="label-container" class="text-3xl mt-1 flex gap-4"></div>
-        </div>
-      </section>
-    </main>
+        <div id="label-container" class="text-3xl mt-1 flex gap-4"></div>
+
+        <button type="button" class="click-btn">저장하기</button>
+        <button type="button" class="click-btn">공유하기</button>
+        <button type="button" class="click-btn">다시 해보기</button>
+        
+      </div>
+    </section>
+
     <script>
       function readURL(input) {
         if (input.files && input.files[0]) {
@@ -65,7 +66,7 @@
         }
       }
     </script>
-    <script type="module" src="./src/js/animate.js"></script>
+    <!-- <script type="module" src="./src/js/animate.js"></script> -->
     <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

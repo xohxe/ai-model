@@ -1,7 +1,20 @@
 import * as tf from "@tensorflow/tfjs";
 import * as tmImage from "@teachablemachine/image";
 
-const URL = "https://teachablemachine.withgoogle.com/models/_gMZKvnj2/";
+// window.addEventListener("scroll", () => {
+//   ClickScroll();
+// });
+// const ClickScroll = () => {
+//   const distance = window.scrollY;
+//   document.querySelector(".top-header").style.transform = `translateY(${
+//     distance * 1
+//   }px)`;
+//   document.querySelector(".container").style.transform = `translateY(${
+//     distance * 0.3
+//   }px)`;
+// };
+
+const URL = "https://teachablemachine.withgoogle.com/models/WoWdyRlMM/";
 
 let model, webcam, labelContainer, maxPredictions;
 
@@ -66,6 +79,8 @@ predictBtn.addEventListener("click", () => {
     .scrollIntoView({ behavior: "smooth", inline: "nearest" });
 
   predict();
+
+  document.querySelector(".top-header").classList.add("hidden");
 });
 
 // faceImage.addEventListener("click", () => {
