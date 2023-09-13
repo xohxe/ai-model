@@ -19,9 +19,9 @@ const ClickScroll = () => {
   document.querySelector(".container").style.transform = `translateY(${
     distance * 0.3
   }px)`;
-  setTimeout(() => {
-    document.querySelector("section h3").classList.add("animate-me");
-  }, 400);
+//   setTimeout(() => {
+//     document.querySelector("section h3").classList.add("animate-me");
+//   }, 400);
 };
 
 // window.addEventListener("scroll", function() {

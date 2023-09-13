@@ -21,11 +21,16 @@
       </div>
 
       <section class="cont-2 cool-effect">
-        <h3>Let's Start!</h3>
+        <!-- <h3>Let's Start!</h3> -->
         <div class="btn-wrap">
-          <button type="button" id="uploadPhoto" class="click-btn">
-            업로드
+          <input type="file" onchange="readURL(this);" accept="image/*" />
+          <img src="#" id="face-image" class="file-upload-image" />
+          <button type="button" id="predict-btn" class="click-btn">
+            분석하기
           </button>
+          <!-- <button type="button" id="uploadPhoto" class="click-btn">
+            업로드
+          </button> -->
           <!-- <button type="button" id="takePhoto" class="click-btn">
             직접촬영
           </button> -->
@@ -33,11 +38,7 @@
       </section>
       <section class="cont-3">
         <div class="flex flex-col justify-between items-center">
-          <input type="file" onchange="readURL(this);" accept="image/*" />
-          <img src="#" id="face-image" class="file-upload-image" />
-          <button type="button" id="predict-btn" class="click-btn">
-            분석하기
-          </button>
+         
           <div id="webcam-container"></div>
           <div id="label-wrap" class="hidden text-white mt-3 flex gap-4">
             당신과 가장 닮은 유명인은..

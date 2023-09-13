@@ -44,27 +44,30 @@ export const predict = async () => {
   }
 };
 
-const btn2 = document.querySelector("#takePhoto");
-const btn3 = document.querySelector("#uploadPhoto");
-// btn2.addEventListener("click", () => {
-//   document.querySelector(".top-header").style.zIndex = -1;
-//   document
-//     .querySelector(".cont-3")
-//     .scrollIntoView({ behavior: "smooth", inline: "nearest" });
+//const btn2 = document.querySelector("#takePhoto");
+//const btn3 = document.querySelector("#uploadPhoto");
+const startBtn = document.querySelector("#clickBtn");
 
-//   init();
-// });
-
-btn3.addEventListener("click", () => {
-  //document.querySelector(".top-header").style.display = "none";
+startBtn.addEventListener("click", () => {
+  document.querySelector(".top-header").style.zIndex = -1;
   document
-    .querySelector(".cont-3")
+    .querySelector(".cont-2")
     .scrollIntoView({ behavior: "smooth", inline: "nearest" });
 
   init();
 });
 
-const faceImage = document.querySelector("#predict-btn");
-faceImage.addEventListener("click", () => {
+const predictBtn = document.querySelector("#predict-btn");
+
+predictBtn.addEventListener("click", () => {
+  //document.querySelector(".top-header").style.display = "none";
+  document
+    .querySelector(".cont-3")
+    .scrollIntoView({ behavior: "smooth", inline: "nearest" });
+
   predict();
 });
+
+// faceImage.addEventListener("click", () => {
+//   predict();
+// });
