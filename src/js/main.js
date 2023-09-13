@@ -14,7 +14,9 @@ import * as tmImage from "@teachablemachine/image";
 //   }px)`;
 // };
 
-const URL = "https://teachablemachine.withgoogle.com/models/WoWdyRlMM/";
+// window.addEventListener("DOMContentLoaded", init);
+
+const URL = "https://teachablemachine.withgoogle.com/models/iaHjQD7Wd/";
 
 let model, webcam, labelContainer, maxPredictions;
 
@@ -42,6 +44,7 @@ export const loop = async () => {
 export const predict = async () => {
   var image = document.querySelector("#face-image");
   const labelWrap = document.querySelector("#label-wrap");
+
   labelWrap.classList.remove("hidden");
   const prediction = await model.predict(image, false);
 
@@ -51,8 +54,10 @@ export const predict = async () => {
     //labelContainer.childNodes[i].innerHTML = classPrediction;
 
     //console.log(prediction[i].probability.toFixed(2));
-    if (prediction[i].probability.toFixed(2) > 0.9) {
-      labelContainer.childNodes[i].innerHTML = `${prediction[i].className}`;
+    if (prediction[i].probability.toFixed(2) > 0.7) {
+      labelContainer.innerHTML = `${prediction[i].className}`;
+    } else {
+      labelContainer.innerText = "없네요";
     }
   }
 };
@@ -66,11 +71,11 @@ startBtn.addEventListener("click", () => {
   document
     .querySelector(".cont-2")
     .scrollIntoView({ behavior: "smooth", inline: "nearest" });
-
   init();
 });
 
 const predictBtn = document.querySelector("#predict-btn");
+const restartBtn = document.querySelector("#restartBtn");
 
 predictBtn.addEventListener("click", () => {
   //document.querySelector(".top-header").style.display = "none";
@@ -82,7 +87,15 @@ predictBtn.addEventListener("click", () => {
 
   document.querySelector(".top-header").classList.add("hidden");
 });
+restartBtn.addEventListener("click", () => {
+  document
+    .querySelector(".cont-2")
+    .scrollIntoView({ behavior: "smooth", inline: "nearest" });
 
-// faceImage.addEventListener("click", () => {
-//   predict();
-// });
+  document.querySelector("#label-container").innerHTML = "";
+  document.querySelector("#face-image").setAttribute("src", "");
+  document.querySelector("#face-image").classList.add("hidden");
+
+  document.querySelector(".file-wrap").classList.remove("hidden");
+  document.querySelector("#upload-img").value = "";
+});

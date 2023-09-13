@@ -366,25 +366,111 @@ video {
   margin-top: 0.75rem;
 }.mt-1{
   margin-top: 0.25rem;
+}.mb-2{
+  margin-bottom: 0.5rem;
+}.mb-4{
+  margin-bottom: 1rem;
 }.flex{
   display: flex;
 }.hidden{
   display: none;
+}.h-64{
+  height: 16rem;
+}.h-8{
+  height: 2rem;
+}.w-8{
+  width: 2rem;
+}.w-full{
+  width: 100%;
+}.w-9{
+  width: 2.25rem;
+}.w-72{
+  width: 18rem;
+}.w-7{
+  width: 1.75rem;
+}.max-w-md{
+  max-width: 28rem;
+}.max-w-lg{
+  max-width: 32rem;
+}.max-w-2xl{
+  max-width: 42rem;
+}.cursor-pointer{
+  cursor: pointer;
 }.flex-col{
   flex-direction: column;
 }.items-center{
   align-items: center;
+}.justify-center{
+  justify-content: center;
 }.justify-between{
   justify-content: space-between;
 }.gap-4{
   gap: 1rem;
+}.rounded-lg{
+  border-radius: 0.5rem;
+}.border-2{
+  border-width: 2px;
+}.border-dashed{
+  border-style: dashed;
+}.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgba(209, 213, 219, 1);
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+}.bg-gray-50{
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, 1);
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}.px-8{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}.pb-6{
+  padding-bottom: 1.5rem;
+}.pt-5{
+  padding-top: 1.25rem;
 }.text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}.font-semibold{
+  font-weight: 600;
 }.text-white{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, 1);
   color: rgba(255, 255, 255, var(--tw-text-opacity));
+}.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgba(107, 114, 128, 1);
+  color: rgba(107, 114, 128, var(--tw-text-opacity));
+}.hover\:bg-gray-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, 1);
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}@media (prefers-color-scheme: dark){.dark\:border-gray-600{
+    --tw-border-opacity: 1;
+    border-color: rgba(75, 85, 99, 1);
+    border-color: rgba(75, 85, 99, var(--tw-border-opacity));
+  }.dark\:bg-gray-700{
+    --tw-bg-opacity: 1;
+    background-color: rgba(55, 65, 81, 1);
+    background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  }.dark\:text-gray-400{
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, 1);
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+  }.dark\:hover\:border-gray-500:hover{
+    --tw-border-opacity: 1;
+    border-color: rgba(107, 114, 128, 1);
+    border-color: rgba(107, 114, 128, var(--tw-border-opacity));
+  }.dark\:hover\:bg-gray-600:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(75, 85, 99, 1);
+    background-color: rgba(75, 85, 99, var(--tw-bg-opacity));
+  }
 }@font-face {
   font-family: "Cafe24Supermagic-Bold-v1.0";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/Cafe24Supermagic-Bold-v1.0.woff2") format("woff2");
