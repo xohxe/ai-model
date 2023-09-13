@@ -39,7 +39,10 @@
             분석하기
           </button>
           <div id="webcam-container"></div>
-          <div id="label-container" class="text-white mt-3 flex gap-4"></div>
+          <div id="label-wrap" class="hidden text-white mt-3 flex gap-4">
+            당신과 가장 닮은 유명인은..
+          </div>
+          <div id="label-container" class="text-3xl mt-1 flex gap-4"></div>
         </div>
       </section>
     </main>
@@ -54,14 +57,6 @@
               .querySelector("#face-image")
               .setAttribute("src", e.target.result);
           };
-
-          // function (e) {
-          //
-          //   // $('.image-upload-wrap').hide();
-          //   // $('.file-upload-image').attr('src', e.target.result);
-          //   // $('.file-upload-content').show();
-          //   // $('.image-title').html(input.files[0].name);
-          // };
 
           reader.readAsDataURL(input.files[0]);
         } else {

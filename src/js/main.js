@@ -13,7 +13,7 @@ export const init = async () => {
   model = await tmImage.load(modelURL, metadataURL);
   maxPredictions = model.getTotalClasses();
 
- // const prediction = await model.predictTopK(maxPredictions, flip);
+  // const prediction = await model.predictTopK(maxPredictions, flip);
   labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
     labelContainer.appendChild(document.createElement("div"));
@@ -27,29 +27,36 @@ export const loop = async () => {
 };
 
 export const predict = async () => {
-
   var image = document.querySelector("#face-image");
+  const labelWrap = document.querySelector("#label-wrap");
+  labelWrap.classList.remove("hidden");
   const prediction = await model.predict(image, false);
+
   for (let i = 0; i < maxPredictions; i++) {
     const classPrediction =
       prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-    labelContainer.childNodes[i].innerHTML = classPrediction;
+    //labelContainer.childNodes[i].innerHTML = classPrediction;
+
+    //console.log(prediction[i].probability.toFixed(2));
+    if (prediction[i].probability.toFixed(2) > 0.9) {
+      labelContainer.childNodes[i].innerHTML = `${prediction[i].className}`;
+    }
   }
 };
 
 const btn2 = document.querySelector("#takePhoto");
 const btn3 = document.querySelector("#uploadPhoto");
-btn2.addEventListener("click", () => {
-  document.querySelector(".top-header").style.display = "none";
-  document
-    .querySelector(".cont-3")
-    .scrollIntoView({ behavior: "smooth", inline: "nearest" });
+// btn2.addEventListener("click", () => {
+//   document.querySelector(".top-header").style.zIndex = -1;
+//   document
+//     .querySelector(".cont-3")
+//     .scrollIntoView({ behavior: "smooth", inline: "nearest" });
 
-  init();
-});
+//   init();
+// });
 
 btn3.addEventListener("click", () => {
-  document.querySelector(".top-header").style.display = "none";
+  //document.querySelector(".top-header").style.display = "none";
   document
     .querySelector(".cont-3")
     .scrollIntoView({ behavior: "smooth", inline: "nearest" });

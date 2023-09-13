@@ -364,8 +364,12 @@ video {
   }
 }.mt-3{
   margin-top: 0.75rem;
+}.mt-1{
+  margin-top: 0.25rem;
 }.flex{
   display: flex;
+}.hidden{
+  display: none;
 }.flex-col{
   flex-direction: column;
 }.items-center{
@@ -374,6 +378,9 @@ video {
   justify-content: space-between;
 }.gap-4{
   gap: 1rem;
+}.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }.text-white{
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, 1);
@@ -421,9 +428,11 @@ video {
   background: #fcdb6d;
   color: #0056a7;
 }.cont-3{
+  position: relative;
   --tw-bg-opacity: 1;
   background-color: rgba(55, 65, 81, 1);
   background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+  z-index: 10;
 }.btn-wrap {
   @applhy flex items-center;
 }@keyframes fadeIn {

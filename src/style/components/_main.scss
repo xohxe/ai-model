@@ -48,7 +48,8 @@ section {
 }
 
 .cont-3 {
-  @apply bg-gray-700;
+  @apply relative bg-gray-700;
+  z-index: 10;
 }
 .btn-wrap {
   @applhy flex items-center;
