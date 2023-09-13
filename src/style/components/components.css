@@ -1,3 +1,8 @@
-.webcam-container :not(:last-child) {
+@import url("https://fonts.googleapis.com/css?family=Courgette:400,700&display=swap");
+body {
+  font-family: "Courgette";
+}
+
+#webcam-container > canvas:not(:last-child) {
   display: none;
 }/*# sourceMappingURL=components.css.map */
